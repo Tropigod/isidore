@@ -27,7 +27,7 @@ const rows = [
   createData('ex3', 262, 16.0, 24, 6.0),
   createData('ex4', 159, 6.0, 24, 4.0),
   createData('ex5', 356, 16.0, 49, 3.9),
-  createData('ex6', 408, 3.2, 87, 6.5),
+  createData('ex6', 842, 3.2, 87, 1500),
   createData('ex7', 237, 9.0, 37, 4.3),
   createData('ex8', 375, 0.0, 94, 0.0),
   createData('ex9', 518, 26.0, 65, 7.0),
