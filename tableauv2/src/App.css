@@ -1,0 +1,33 @@
+.App {
+  text-align: center;
+}
+
+
+td
+{
+    border: 1px solid black;
+    text-align: center;
+    padding: 10px 50px;
+  }
+
+th
+{
+  border: 1px solid black;
+  text-align: center;
+  background-color: #eee;
+}
+
+table{
+  border-collapse: collapse;
+  table-layout: auto;
+  width: 400px;
+}
+
+input{
+  border: none;
+  text-align: center;
+
+}
+input:focus{
+  border: none;
+}

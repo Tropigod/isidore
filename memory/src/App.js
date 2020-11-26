@@ -17,6 +17,9 @@ import Checkbox from '@material-ui/core/Checkbox';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import Switch from '@material-ui/core/Switch';
 
+
+
+
 function createData(name, champs1, champs2, champs3, champs4,champs5) {
   return { name, champs1, champs2, champs3, champs4,champs5 };
 }
@@ -64,6 +67,8 @@ function stableSort(array, comparator) {
   return stabilizedThis.map((el) => el[0]);
 }
 
+//function handleAddColumn(){}
+
 const headCells = [
   { id: 'name', numeric: false, disablePadding: true, label: 'id' },
   { id: 'champs1', numeric: true, disablePadding: false, label: 'champs1' },
@@ -89,6 +94,7 @@ function EnhancedTableHead(props) {
             onChange={onSelectAllClick}
             inputProps={{ 'aria-label': 'select all ids' }}
           />
+          
         </TableCell>
         {headCells.map((headCell) => (
           <TableCell
@@ -97,6 +103,7 @@ function EnhancedTableHead(props) {
             padding={headCell.disablePadding ? 'none' : 'default'}
             sortDirection={orderBy === headCell.id ? order : false}
           >
+            
             <TableSortLabel
               active={orderBy === headCell.id}
               direction={orderBy === headCell.id ? order : 'asc'}
@@ -109,6 +116,7 @@ function EnhancedTableHead(props) {
                 </span>
               ) : null}
             </TableSortLabel>
+            <button onClick>ajouter colonne</button>
           </TableCell>
         ))}
       </TableRow>
@@ -306,8 +314,8 @@ export default function EnhancedTable() {
                       <TableCell component="th" id={labelId} scope="row" padding="none">
                         {row.name}
                       </TableCell>
-                      <TableCell align="right">{row.champs1}</TableCell>
-                      <TableCell align="right">{row.champs2}</TableCell>
+                      <TableCell align="right"><form><input value={row.champs1}></input></form></TableCell>
+                      <TableCell align="right"><form>{row.champs2}</form></TableCell>
                       <TableCell align="right">{row.champs3}</TableCell>
                       <TableCell align="right">{row.champs4}</TableCell>
                       <TableCell align="right">{row.champs5}</TableCell>
